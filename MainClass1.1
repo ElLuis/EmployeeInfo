@@ -1,0 +1,90 @@
+import java.util.Calendar;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author Luis Sanchez
+ */
+public class Employee {
+    
+    Scanner s = new Scanner(System.in);
+    //private variables
+    
+    private String name;
+    private String address;
+    private Calendar hired;
+    private Calendar dob;
+    private int salary;
+    
+    //setters and mediators
+    public String getName() 
+            {
+                return name;
+            }
+    public void setName(String value)
+    {
+        name = value;
+    }
+    
+    public String getAddress() 
+            {
+                return address;
+            }
+    public void setAdress(String value)
+    {
+        address = value;
+    }
+    
+    public Calendar getHired() 
+            {
+                return hired;
+            }
+    public void setName(Calendar value)
+    {
+        hired = value;
+    }
+    
+     public Calendar getDOB() 
+            {
+                return dob;
+            }
+    public void setDOB(Calendar value)
+    {
+        dob = value;
+    }
+    
+     public int getSalary() 
+            {
+                return salary;
+            }
+    public void setSalary(int value)
+    {
+        salary = value;
+    }
+    
+    //Constructor
+
+    public Employee(String name, String address,Calendar hired, Calendar dob, int slary)
+    {
+        this.name = name;
+        this.address = address;
+        this.hired = hired;
+        this.dob =dob;
+        this.salary = slary;
+    }
+    
+    public Employee(String name,Calendar hired, Calendar dob)
+    {
+        this.name = name;
+        this.hired = hired;
+        this.dob =dob;
+    }
+    
+    @Override
+    public String toString()
+    {
+         return "Name: "+ name+"\nDOB: "+dob+"\nDate hired:"+hired+"\nAnnual Salary: $"+salary;
+    }
+    
+}
